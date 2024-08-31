@@ -299,7 +299,7 @@ def screen2():
         image=button_image_2,
         borderwidth=0,
         highlightthickness=0,
-        command=main,
+        command=lambda: print("button_2 clicked"),
         relief="flat"
     )
     button_2.place(
@@ -324,10 +324,6 @@ def screen2():
         width=326.0,
         height=194.0
     )
-    #Abrir explorador de arquivos
-    def explorer():
-        time.sleep(2)
-        pyautogui.hotkey('win', 'e')
 
     button_image_4 = PhotoImage(
         file=relative_to_assets("button_4.png"))
@@ -335,7 +331,7 @@ def screen2():
         image=button_image_4,
         borderwidth=0,
         highlightthickness=0,
-        command=explorer,
+        command=lambda: print("button_4 clicked"),
         relief="flat"
     )
     button_4.place(
@@ -375,6 +371,30 @@ def screen2():
         y=779.0,
         width=326.0,
         height=205.0
+    )
+
+    button_image_7 = PhotoImage(
+        file=relative_to_assets("button_7.png"))
+    button_7 = Button(
+        image=button_image_7,
+        borderwidth=0,
+        highlightthickness=0,
+        command=main,
+        relief="flat"
+    )
+    button_7.place(
+        x=1423.0,
+        y=134.0,
+        width=317.0,
+        height=212.0
+    )
+
+    image_image_2 = PhotoImage(
+        file=relative_to_assets("image_2.png"))
+    image_2 = canvas.create_image(
+        1590.0,
+        78.0,
+        image=image_image_2
     )
     
 window.resizable(False, False)
